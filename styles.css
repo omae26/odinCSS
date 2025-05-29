@@ -1,0 +1,32 @@
+/*Syntax for CSS: Selector, curly braces, declarations */
+
+
+div {
+    color: white;
+    /* This is a declaration */
+}
+
+.alert-text {
+    color: white;
+}
+
+#title{
+    background-color: red;;
+}
+
+/* When you have two elements that share the same style declarations, you can group them to avoid repetition e.g*/
+.alert-text, #title {
+    color: white;
+}
+
+.subsection.header {
+    color: blue;
+}
+
+.subsection#preview {
+    color: blue;
+}
+
+.ancestors .contents{
+    /* some declarations */
+}

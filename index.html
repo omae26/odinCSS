@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title></title>
+
+    </head>
+
+    <body>
+        <div>Hello, World!</div>
+        <div>Hello again!</div>
+        <p>Hi...</p>
+        <div>Okay, bye.</div>
+
+        <!-- Class selectors -->
+        <div class="alert-text severe-alert">
+            Please agree to our terms of service
+        </div>
+
+        <!-- ID Selectors -->
+        <div id="title">
+            My Awesome 90's Page
+        </div>
+
+        <!-- Chaining selectors -->
+        <div>
+            <div class="subsection header">Latest posts</div>
+            <p class="subsection preview">This is where a preview from a post might go</p>
+            <!-- We have 2 elements with the subsection class i.e div & p -->
+            <!-- When we want to apply a separate style to the element that  has header as the second class ,
+             we chain both the class selectors in css like this:
+            .subsection.header {
+                color: blue;}-->
+                <!-- There shouldn't be any space between .subsection and .header,-->
+        </div>
+
+        <!-- This can also be used to chain a class and an ID, as shown below:-->
+        <div>
+            <div class="subsection header">Latest Posts</div>
+            <p class="subsection" id="preview">This is where a preview for a post might go.</p>
+            <!-- .subsection.header {
+                    color: red;
+                 }
+                .subsection#preview {
+                    color: blue;
+                }       
+            In general, you can’t chain more than one type selector since an element can’t 
+            be two different types at once -->
+        </div>
+
+        <!-- Combinators are used to show a relationship between selectprs-->
+         <div class="ancestor">
+            <div class="'contents">
+                <div class="contents">
+               </div>
+            </div>
+         </div>
+         <!-- There's no limit to how many combinators you can use -->
+        
+    </body>
+</html>
+
+<!-- A type selector (or element selector) will select all elements of the given element type, 
+ and the syntax is just the name of the element -->
+
+<!-- Class selectors will select all elements with the given class,
+  which is just an attribute you place on an HTML element. -->
+  <!-- Classes aren’t required to be unique, so you can use the same class on as many elements as you want. -->
+   <!-- Since whitespace is used to separate class names, we use hyphens for multi-word texts -->
+    <!-- period (.) used -->
+
+<!-- ID selectors are similar to class selectors, but they select only one element with the given id.-->
+<!-- They select an element with the given id, which is another attribute you place on an HTML element: -->
+ <!-- # used -->
+
+<!-- The major difference between classes and IDs is that an element can only have one id. 
+ An id cannot be repeated on a single page, and the id attribute should not contain any whitespace at all. -->
