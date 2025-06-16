@@ -1,0 +1,19 @@
+Every single element in css is a box, either rectangular or square
+Every single thing on a webpage is a rectangular box. 
+These boxes can have other boxes in them and can sit alongside one another.  e.g
+ {
+  border: 1px solid red;
+}
+
+When it comes to layout, all elements have to fit in in boxes (rectangles). Laying out a webpage and positioning all its elements is deciding how you are going to nest and stack these boxes.
+There are many ways to manipulate the size of these boxes, and the space between them, using padding, margin, and border. 
+    *Padding: Increases the space between the border of a box and the contents of the box. 
+              It is the space inside the box i.e. the background of the contents. It surround the content all round.
+              Inside the border
+    *Border: Adds space (even if it's only a pixel) between the margin and the padding.
+             It goes around the padding of an element/content
+    
+    *Margin: Increases the space between the border of a box and the borders of adjacent boxes
+             It is outside the border of the element. Space between 2 boxes
+Height and width specify the size of the contents box
+When we put box-sizing: border-box; in CSS, The height & width account for the padding & border. It is often added to the universal style
