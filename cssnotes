@@ -15,3 +15,59 @@ iii. Inline CSS.
     The style attribute is placed inside of the opening tag of the element you want to style, and it contains the CSS rules you want to apply to that element.
     This method is not recommended for large projects, as it can make your HTML code messy and difficult to read.
     If you need to add a unique style for a single element, this method can work just fine.
+
+    How to handle conflicting CSS rules:
+    Sometimes, you might end up with some unexpected behavior like this it’s either 
+    because of these default styles, not understanding how a property works, or n
+    ot understanding this little thing called the cascade.
+    The cascade is what determines which rules actually get applied to your HTML.
+    There are different factors that the cascade uses to determine this. We will examine three of these factors.
+    1. Specificity: The more specific a selector is, the higher its specificity value.
+       For example, an ID selector (#id) has a higher specificity than a class selector (.class), 
+       and a class selector has a higher specificity than an element selector (div).
+       If two rules have the same specificity, the one that appears later in the CSS will take precedence.
+    How Specificity woks:
+    <!-- index.html -->
+
+<div class="main">
+  <div class="list subsection"></div>
+</div>
+/* rule 1 */
+.subsection {
+  color: blue;
+}
+
+/* rule 2 */
+.main .list {
+  color: red;
+}
+In the example above, both rules are using only class selectors, 
+but rule 2 is more specific because it is using more class selectors. Therefore, the div class list subsection
+will be rendered in red.
+
+In this example below:
+/* rule 1 */
+#subsection .list {
+  background-color: yellow;
+  color: blue;
+}
+
+/* rule 2 */
+#subsection .main .list {
+  color: red;
+}
+In this final example, both rules are using ID and class selectors, so neither rule is using a 
+more specific selector than the other. The cascade then checks the amounts of each selector type. 
+Both rules only have one ID selector, but rule 2 has more class selectors, so rule 2 has a higher specificity!
+But the yellow background will apply because it has no conflicting declaration.
+Note: Combinators (descendant, child etc) do not add to specificity.
+      Combinators take precedence over chained selectors when it comes to applying styles.
+
+Inheritance: Some CSS properties are inherited by default, meaning that if you set a property on a parent element,
+the child elements will inherit that property unless you override it. For example, if you set the font size 
+on a parent element, all child elements will inherit that font size unless you specify a different font size 
+for them(the child elements).
+
+Let's say that after every factor has been taken into account, there are still multiple conflicting rules 
+targeting an element. In this case, the cascade will run through every other factor including inheritance & 
+specificity, and then it will apply the last rule that was defined in the CSS file.
