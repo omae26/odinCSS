@@ -3,6 +3,7 @@
 
 div {
     color: white;
+    
     /* This is a declaration */
 }
 
@@ -21,6 +22,7 @@ div {
 
 .subsection.header {
     color: blue;
+    
 }
 
 .subsection#preview {

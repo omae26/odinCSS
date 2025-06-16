@@ -7,7 +7,7 @@ i. External CSS is the most common.
 
 ii. Internal CSS(or embedded CSS).
     It involves adding the css within the HTML file itself.
-    With this method, you place all the rules insode of a pair of opening and closing <style></style> tags,
+    With this method, you place all the rules inside of a pair of opening and closing <style></style> tags,
     which are then placed inside of the opening and closing <head> </head> tags.
 
 iii. Inline CSS.
